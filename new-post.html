@@ -1,0 +1,25 @@
+{{define "content"}}
+<style>
+  input,
+  textarea {
+    width: 100%;
+  }
+</style>
+<form action="/new-post">
+  <p>
+    <label for="title">
+      Title:<br />
+      <input type="text" id="title" name="post-title" />
+    </label>
+  </p>
+  <p>
+    <label for="content">
+      Content:<br />
+      <textarea id="content" name="post-content" cols="30" rows="10"></textarea>
+    </label>
+  </p>
+  <p>
+    <button>Submit</button>
+  </p>
+</form>
+{{end}}
