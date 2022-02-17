@@ -10,4 +10,6 @@ Experimental desktop blogging software that aims to
     wordpress.com site. Should allow exporting the whole thing to be usable
     with the desktop tool of course.
 
+None of which has been implemented tho.
+
 [1]: https://www.getlektor.com/docs/deployment/

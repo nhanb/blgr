@@ -12,17 +12,17 @@ type Page struct {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("base.html", "index.html")
+	t, _ := template.ParseFiles("templates/base.html", "templates/home.html")
 	t.ExecuteTemplate(w, "base", Page{Title: "Home"})
 }
 
 func newPostHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("base.html", "new-post.html")
+	t, _ := template.ParseFiles("templates/base.html", "templates/new-post.html")
 	t.ExecuteTemplate(w, "base", Page{Title: "New Post"})
 }
 
 func main() {
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/new-post", newPostHandler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8000", nil))
 }
